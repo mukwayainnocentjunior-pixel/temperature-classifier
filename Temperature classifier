@@ -1,0 +1,37 @@
+/*1. Temperature Classifier
+ Write a program that asks the user to enter a temperature in Celsius and tells them whether it is cold,
+ moderate, or hot. Use nested if statements to handle ranges of temperatures.
+ Step-by-step assignment:
+ • Ask the user to enter a temperature value (integer or decimal).
+ • If the temperature is below 10, display 'It is cold.'
+ • If it is between 10 and 25 (inclusive), display 'The weather is moderate.'
+ • If it is above 25, display 'It is hot.'
+ • Handle unrealistic values like below -50 or above 60 with a message 'Temperature out of range.'
+ Example test runs:
+ • Input: 8 → Output: It is cold.
+ • Input: 22 → Output: The weather is moderate.
+ • Input: 35 → Output: It is hot.
+ • Input: -70 → Output: Temperature out of range.*/
+                                               //SOLUTION.
+#include <iostream>
+using namespace std;
+int main (){
+    double temp_value;
+    cout << "Enter the temperature value: ";
+    cin >> temp_value;
+    if (temp_value < -50 || temp_value > 60) {
+        cout << "Temperature out of range\n";
+
+    }
+    else {
+        if (temp_value < 10) {
+            cout << "It is cold\n";
+        }else if (temp_value >= 10 and temp_value <= 25) {
+            cout << "The weather is moderate\n";
+        }else {
+            cout << "It is hot\n";
+        }
+    }
+
+    return 0;
+}
